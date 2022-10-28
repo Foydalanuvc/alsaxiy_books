@@ -99,12 +99,12 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django_password_validators.password_character_requirements.password_validation.PasswordCharacterValidator',
         'OPTIONS': {
-             'min_length_digit': 1,
-             'min_length_alpha': 2,
-             'min_length_special': 3,
-             'min_length_lower': 4,
-             'min_length_upper': 5,
-             'special_characters': "~!@#$%^&*()_+{}\":;'[]"
+             # 'min_length_digit': 1,
+             # 'min_length_alpha': 2,
+             # 'min_length_special': 3,
+             # 'min_length_lower': 4,
+             # 'min_length_upper': 5,
+             # 'special_characters': "~!@#$%^&*()_+{}\":;'[]"
          }
     },
 ]
@@ -127,6 +127,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATIC_ROOT = BASE_DIR / 'static'
+
+STATICFILES_DIRS = BASE_DIR / 'assets',
+
 MEDIA_URL = "media/"
 
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -137,12 +141,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-    ],
-    'DEFAULT_PARSER_CLASSES': [
-        'rest_framework.parsers.JSONParser',
-    ],
+    # 'DEFAULT_RENDERER_CLASSES': [
+    #     'rest_framework.renderers.JSONRenderer',
+    # ],
+    # 'DEFAULT_PARSER_CLASSES': [
+    #     'rest_framework.parsers.JSONParser',
+    # ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
     ]
 }
